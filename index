@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación del Desarrollo.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="controls">
+                <button onclick="changeFontSize(2)">A+</button>
+                <button onclick="changeFontSize(-2)">A-</button>
+                <button onclick="toggleDarkMode()">Modo Oscuro</button>
+            </div>
+            <h1>Evaluación del desarrollo</h1>
+            <p class="subtitle">Psicología 5° semestre - Universitario Cristóbal Colón.</p>
+        </header>
+
+        <main>
+            <h2 class="welcome-title">Bienvenidas, bienvenidos.</h2>
+            <p>Selecciona el periodo:</p>
+
+            <nav class="button-group">
+                <a href="parcial1/parcial1.html" class="btn-parcial">Acceder al Parcial 1</a>
+                <a href="parcial2/parcial2.html" class="btn-parcial">Acceder al Parcial 2</a>
+                <a href="parcial3/parcial3.html" class="btn-parcial">Acceder al Parcial 3</a>
+                
+                <a href="evaluaciones/evaluaciones.html" class="btn-parcial btn-evaluacion">Evaluación.</a>
+                
+                <a href="reglas/reglas.html" class="btn-parcial">Reglas de curso</a>
+            </nav>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <p>Materia: Evaluación del desarrollo | 2026</p>
+        <span class="autor">Edgar Alfonso Naranjo Pineda</span>
+    </footer>
+
+    <script>
+        function changeFontSize(delta) {
+            const body = document.body;
+            const style = window.getComputedStyle(body, null).getPropertyValue('font-size');
+            const currentSize = parseFloat(style);
+            body.style.fontSize = (currentSize + delta) + 'px';
+        }
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
